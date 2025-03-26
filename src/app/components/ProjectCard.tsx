@@ -45,7 +45,7 @@ export default function ProjectCard({
             target="_blank"
             className="inline-block px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg transition-colors"
           >
-            View Project
+            View
           </Link>
         )}
       </div>

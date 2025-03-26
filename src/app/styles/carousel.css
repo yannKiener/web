@@ -1,0 +1,46 @@
+.carousel-container {
+  margin: 0 -1rem;  /* Compensate for slide padding */
+}
+
+.carousel-container .slick-slide {
+  padding: 0 1rem;
+}
+
+/* Customize dots */
+.carousel-container .slick-dots li button:before {
+  color: #fff;
+  opacity: 0.25;
+}
+
+.carousel-container .slick-dots li.slick-active button:before {
+  color: #fff;
+  opacity: 0.75;
+}
+
+/* Customize arrows */
+.carousel-container .slick-prev,
+.carousel-container .slick-next {
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+}
+
+.carousel-container .slick-prev {
+  left: 10px;
+}
+
+.carousel-container .slick-next {
+  right: 10px;
+}
+
+.carousel-container .slick-prev:before,
+.carousel-container .slick-next:before {
+  font-size: 40px;
+  opacity: 0.75;
+}
+
+/* Hover effects */
+.carousel-container .slick-prev:hover:before,
+.carousel-container .slick-next:hover:before {
+  opacity: 1;
+} 
