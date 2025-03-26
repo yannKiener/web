@@ -88,7 +88,7 @@ export default function Home() {
         <h2 className="text-4xl font-bold mb-12 text-center">Get in Touch</h2>
         <div className="max-w-2xl mx-auto">
           <p className="text-xl text-gray-400 text-center mb-8">
-            Interested in working together? Let's create something amazing!
+            Interested in working together? Let&apos;s create something amazing!
           </p>
           <div className="flex justify-center gap-6">
             <Link 
