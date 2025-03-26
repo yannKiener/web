@@ -6,8 +6,8 @@ import Navigation from "./components/Navigation";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Yann Kiener - Independent Game Developer",
-  description: "Portfolio of Yann Kiener, an independent game developer specializing in Unity and C# development.",
+  title: "Speaf - Independent Game Developer",
+  description: "Portfolio of Speaf, an independent game developer specializing in Unity and C# development.",
 };
 
 export default function RootLayout({

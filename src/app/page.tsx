@@ -34,7 +34,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex-1 space-y-6">
             <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-              Yann Kiener
+              Speaf
             </h1>
             <h2 className="text-3xl md:text-4xl text-gray-300">
               Independent Game Developer
