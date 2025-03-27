@@ -117,7 +117,7 @@ export default function Home() {
             Independent Game Developer
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Crafting gaming experiences with love. No ads, no paywalls, just pure fun. Site is work in progress !
+            Crafting gaming experiences with love. No ads, no paywalls, just games made with passion and creativity.
           </p>
         </div>
       </section>
