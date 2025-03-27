@@ -5,26 +5,60 @@ interface ProjectCardProps {
   title: string;
   description: string;
   imageUrl: string;
+  videoUrl?: string;
   technologies: string[];
   projectUrl?: string;
+  isOngoing?: boolean;
 }
+
+const getYouTubeEmbedUrl = (url: string) => {
+  // Handle different YouTube URL formats
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return match && match[2].length === 11
+    ? `https://www.youtube.com/embed/${match[2]}`
+    : null;
+};
 
 export default function ProjectCard({
   title,
   description,
   imageUrl,
+  videoUrl,
   technologies,
   projectUrl,
+  isOngoing = false,
 }: ProjectCardProps) {
+  const youtubeEmbedUrl = videoUrl ? getYouTubeEmbedUrl(videoUrl) : null;
+
   return (
     <div className="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-transform">
       <div className="relative h-48">
-        <Image
-          src={imageUrl}
-          alt={title}
-          fill
-          className="object-cover"
-        />
+        {youtubeEmbedUrl ? (
+          <iframe
+            src={youtubeEmbedUrl}
+            className="w-full h-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title={title}
+          />
+        ) : videoUrl ? (
+          <video
+            src={videoUrl}
+            className="w-full h-full object-cover"
+            controls
+            muted
+            loop
+            playsInline
+          />
+        ) : (
+          <Image
+            src={imageUrl}
+            alt={title}
+            fill
+            className="object-cover"
+          />
+        )}
       </div>
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2">{title}</h3>
@@ -39,7 +73,7 @@ export default function ProjectCard({
             </span>
           ))}
         </div>
-        {projectUrl && (
+        {projectUrl && !isOngoing && (
           <Link
             href={projectUrl}
             target="_blank"

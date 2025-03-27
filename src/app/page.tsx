@@ -40,23 +40,21 @@ const projects = [
 
 const ongoingProjects = [
   {
-    title: "Project X",
-    description: "An upcoming game project that combines strategy and action in a unique way.",
-    imageUrl: "/images/project-x.png",
-    technologies: ["Unity", "Strategy", "Action"],
+    title: "Project H",
+    description: "An ongoing project about playing as a healer, supporting with a clunky group, in a dungeon crawler with a top-down view. Hopefully some day on steam",
+    imageUrl: "/images/project-h.png",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", 
+    technologies: ["Unity", "Dungeon crawler", "Healing"],
     projectUrl: "#"
   },
   {
-    title: "Project Y",
+    title: "Sky Pirates",
     description: "A new take on the roguelike genre with innovative mechanics.",
-    imageUrl: "/images/project-y.png",
-    technologies: ["Unreal Engine", "Roguelike", "Procedural Generation"],
+    imageUrl: "/images/skypirates.png",
+    videoUrl: "https://www.youtube.com/watch?v=IX2bE-OBtwk", 
+    technologies: ["Unity", "Mobile", "SteamPunk"],
     projectUrl: "#"
   }
-];
-
-const previousProjects = [
-  // ... existing code ...
 ];
 
 export default function Home() {
@@ -100,7 +98,7 @@ export default function Home() {
               Independent Game Developer
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl">
-              Crafting gaming experiences with love. No ads, no paywalls, just pure fun.
+              Crafting gaming experiences with love. No ads, no paywalls, just pure fun. Site is work in progress !
             </p>
             <div className="flex gap-4">
               <Link 
@@ -136,7 +134,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {ongoingProjects.map((project, index) => (
             <div key={index}>
-              <ProjectCard {...project} />
+              <ProjectCard {...project} isOngoing={true} />
             </div>
           ))}
         </div>
