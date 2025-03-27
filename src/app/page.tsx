@@ -1,5 +1,4 @@
 'use client';
-import Image from "next/image";
 import Link from "next/link";
 import ProjectCard from './components/ProjectCard';
 import Slider from "react-slick";
@@ -10,21 +9,21 @@ import "./styles/carousel.css";
 const projects = [
   {
     title: "C.R.A.B.",
-    description: "Fight as a modular crab machine against evil turtles, and reclaim the beach from their tyranny.",
+    description: "Fight as a modular crab machine against evil turtles, and reclaim the beach from their tyranny. Carcinization is on the way.",
     imageUrl: "/images/crab.png",
-    technologies: ["Unreal Engine", "3rd person shooter", "Destructibles"],
+    technologies: ["Unreal Engine", "3rd person shooter", "Destructibles", "Game Jam"],
     projectUrl: "https://yannroirand.itch.io/crab-crustacean-rapid-action-battleforce"
   },
   {
     title: "Deviler",
-    description: "Drive as a futurist delivery guy around a puzzling city. Just don't always trust your guineapig copilot.",
+    description: "Choose your car & drive as a futurist delivery guy around a puzzling city. Just don't always trust your guineapig copilot.",
     imageUrl: "/images/Deviler.png",
-    technologies: ["Unreal Engine", "Driving", "Cyberpunk"],
+    technologies: ["Unreal Engine", "Driving", "Cyberpunk", "Game Jam"],
     projectUrl: "https://hyuponia.itch.io/deviler"
   },
   {
     title: "Rebels and invaders : Annihilation",
-    description: "Inspired by the famous Space Invaders, protect your allies from the alien invasion with lasers that go pew pew.",
+    description: "Inspired by the famous Space Invaders, protect your rebels allies from the alien invasion with lasers that go pew pew.",
     imageUrl: "/images/rebels-and-invaders.png",
     technologies: ["Unity", "3D", "Space shooter"],
     projectUrl: "https://speaf.itch.io/rebels-and-invaders-annihilation"
@@ -35,24 +34,45 @@ const projects = [
     imageUrl: "/images/murdaloc.png",
     technologies: ["Unity", "Pixel art", "Procedural Generation"],
     projectUrl: "https://murdaloc.wordpress.com/"
+  },
+  {
+    title: "Cat made me do it",
+    description: "Your sadistic cat is bored, and you'll make him laugh with a gun. Or a car.",
+    imageUrl: "/images/cat-made-me-do-it.png",
+    technologies: ["Unreal Engine", "3rd person shooter", "Driving", "Game Jam"],
+    projectUrl: "https://yannroirand.itch.io/cat-made-me-do-it"
+  },
+  {
+    title: "Teldrassin",
+    description: "A tiny open world where you play as a human-plant mutant to discover a lost world.",
+    imageUrl: "/images/teldrassin.png",
+    technologies: ["Unreal Engine", "Open-world", "Game Jam"],
+    projectUrl: "https://leodar.itch.io/teldrassin"
+  },
+  {
+    title: "Quantum Playground",
+    description: "An arcade game about breaking bricks as fast as possible by manipulating directions as a physical ball or a quantum wave.",
+    imageUrl: "/images/quantumplayground.png",
+    technologies: ["Unity", "Arcade", "Game Jam"],
+    projectUrl: "https://speaf.itch.io/quantumplayground"
   }
 ];
 
 const ongoingProjects = [
   {
     title: "Project H",
-    description: "An ongoing project about playing as a healer, supporting with a clunky group, in a dungeon crawler with a top-down view. Hopefully some day on steam",
+    description: "A dungeon crawler about living the experience of a healer, supporting with a clunky group with a top-down view. Hopefully some day on steam",
     imageUrl: "/images/project-h.png",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", 
+    videoUrl: "https://youtu.be/lr76TPSGq1A", 
     technologies: ["Unity", "Dungeon crawler", "Healing"],
     projectUrl: "#"
   },
   {
     title: "Sky Pirates",
-    description: "A new take on the roguelike genre with innovative mechanics.",
+    description: "Steampunk universe + Pirate ships : Conquer caribbean islands with air superiority. Hopefully some day on Android and maybe iOS",
     imageUrl: "/images/skypirates.png",
-    videoUrl: "https://www.youtube.com/watch?v=IX2bE-OBtwk", 
-    technologies: ["Unity", "Mobile", "SteamPunk"],
+    videoUrl: "https://www.youtube.com/watch?v=bq_5gRVimWg", 
+    technologies: ["Unity", "Mobile", "Pirates"],
     projectUrl: "#"
   }
 ];
@@ -88,49 +108,23 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="flex-1 space-y-6">
-            <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-              Speaf
-            </h1>
-            <h2 className="text-3xl md:text-4xl text-gray-300">
-              Independent Game Developer
-            </h2>
-            <p className="text-xl text-gray-400 max-w-2xl">
-              Crafting gaming experiences with love. No ads, no paywalls, just pure fun. Site is work in progress !
-            </p>
-            <div className="flex gap-4">
-              <Link 
-                href="#projects" 
-                className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg transition-colors"
-              >
-                View Projects
-              </Link>
-              <Link 
-                href="#contact" 
-                className="px-6 py-3 border border-purple-600 hover:bg-purple-600/20 rounded-lg transition-colors"
-              >
-                Contact Me
-              </Link>
-            </div>
-          </div>
-          <div className="flex-1 relative h-[400px] w-full">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl"></div>
-            <Image
-              src="/hero.webp"
-              alt="Game Development"
-              fill
-              className="object-cover rounded-2xl"
-              priority
-            />
-          </div>
+      <section className="container mx-auto px-4 py-32">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <h1 className="text-6xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-500 to-violet-600">
+            Speaf
+          </h1>
+          <h2 className="text-3xl md:text-4xl text-gray-300">
+            Independent Game Developer
+          </h2>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            Crafting gaming experiences with love. No ads, no paywalls, just pure fun. Site is work in progress !
+          </p>
         </div>
       </section>
 
       {/* Ongoing Projects Section */}
-      <section className="container mx-auto px-4 py-20">
-        <h2 className="text-4xl font-bold text-center mb-12">Ongoing Projects</h2>
+      <section id="ongoing" className="container mx-auto px-4 py-20">
+        <h2 className="text-4xl font-bold text-center mb-12">Upcoming</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {ongoingProjects.map((project, index) => (
             <div key={index}>
@@ -142,7 +136,7 @@ export default function Home() {
 
       {/* Previous Projects Section */}
       <section id="projects" className="container mx-auto px-4 py-20">
-        <h2 className="text-4xl font-bold text-center mb-12">Previous Projects</h2>
+        <h2 className="text-4xl font-bold text-center mb-12">Portfolio</h2>
         <div className="carousel-container">
           <Slider {...settings}>
             {projects.map((project, index) => (
@@ -159,21 +153,14 @@ export default function Home() {
         <h2 className="text-4xl font-bold mb-12 text-center">Get in Touch</h2>
         <div className="max-w-2xl mx-auto">
           <p className="text-xl text-gray-400 text-center mb-8">
-            Interested in working together? Let&apos;s create something amazing!
+            Have some feedback or interested in working together? 
           </p>
           <div className="flex justify-center gap-6">
             <Link 
-              href="mailto:your.email@example.com" 
+              href="mailto:contact.speaf@gmail.com" 
               className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg transition-colors"
             >
               Email Me
-            </Link>
-            <Link 
-              href="https://linkedin.com/in/your-profile" 
-              target="_blank"
-              className="px-6 py-3 border border-purple-600 hover:bg-purple-600/20 rounded-lg transition-colors"
-            >
-              LinkedIn
             </Link>
           </div>
         </div>
@@ -181,3 +168,4 @@ export default function Home() {
     </main>
   );
 }
+

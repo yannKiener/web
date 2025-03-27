@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,7 +17,8 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
-    { href: '#projects', label: 'Projects' },
+    { href: '#ongoing', label: 'Upcoming' },
+    { href: '#projects', label: 'Portfolio' },
     { href: '#contact', label: 'Contact' },
   ];
 
@@ -27,7 +29,15 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="text-xl font-bold text-white">
-            YK
+            <div className="w-8 h-8 rounded-full overflow-hidden">
+              <Image
+                src="/images/Doggo.jpg"
+                alt="Logo"
+                width={32}
+                height={32}
+                className="object-cover"
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

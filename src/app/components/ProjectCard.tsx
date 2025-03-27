@@ -32,8 +32,8 @@ export default function ProjectCard({
   const youtubeEmbedUrl = videoUrl ? getYouTubeEmbedUrl(videoUrl) : null;
 
   return (
-    <div className="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-transform">
-      <div className="relative h-48">
+    <div className={`bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-transform ${isOngoing ? 'h-full' : ''}`}>
+      <div className={`relative ${isOngoing ? 'h-72' : 'h-48'}`}>
         {youtubeEmbedUrl ? (
           <iframe
             src={youtubeEmbedUrl}
@@ -60,9 +60,9 @@ export default function ProjectCard({
           />
         )}
       </div>
-      <div className="p-6">
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-gray-400 mb-4">{description}</p>
+      <div className="p-8">
+        <h3 className="text-2xl font-bold mb-4">{title}</h3>
+        <p className="text-gray-400 mb-6 text-lg">{description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {technologies.map((tech) => (
             <span
