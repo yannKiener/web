@@ -11,14 +11,14 @@ const projects = [
     title: "C.R.A.B.",
     description: "Fight as a modular crab machine against evil turtles, and reclaim the beach from their tyranny. Carcinization is on the way.",
     imageUrl: "/images/crab.png",
-    technologies: ["Unreal Engine", "3rd person shooter", "Destructibles", "Game Jam"],
+    technologies: ["Unreal Engine", "3rd person shooter", "Destructibles", "Game Jam", "Teamwork"],
     projectUrl: "https://yannroirand.itch.io/crab-crustacean-rapid-action-battleforce"
   },
   {
     title: "Deviler",
     description: "Choose your car & drive as a futurist delivery guy around a puzzling city. Just don't always trust your guineapig copilot.",
     imageUrl: "/images/Deviler.png",
-    technologies: ["Unreal Engine", "Driving", "Cyberpunk", "Game Jam"],
+    technologies: ["Unreal Engine", "Driving", "Cyberpunk", "Game Jam", "Teamwork"],
     projectUrl: "https://hyuponia.itch.io/deviler"
   },
   {
@@ -39,21 +39,21 @@ const projects = [
     title: "Cat made me do it",
     description: "Your sadistic cat is bored, and you'll make him laugh with a gun. Or a car.",
     imageUrl: "/images/cat-made-me-do-it.png",
-    technologies: ["Unreal Engine", "3rd person shooter", "Driving", "Game Jam"],
+    technologies: ["Unreal Engine", "3rd person shooter", "Driving", "Game Jam", "Teamwork"],
     projectUrl: "https://yannroirand.itch.io/cat-made-me-do-it"
   },
   {
     title: "Teldrassin",
     description: "A tiny open world where you play as a human-plant mutant to discover a lost world.",
     imageUrl: "/images/teldrassin.png",
-    technologies: ["Unreal Engine", "Open-world", "Game Jam"],
+    technologies: ["Unreal Engine", "Open-world", "Game Jam", "Teamwork"],
     projectUrl: "https://leodar.itch.io/teldrassin"
   },
   {
     title: "Quantum Playground",
     description: "An arcade game about breaking bricks as fast as possible by manipulating directions as a physical ball or a quantum wave.",
     imageUrl: "/images/quantumplayground.png",
-    technologies: ["Unity", "Arcade", "Game Jam"],
+    technologies: ["Unity", "Arcade", "Game Jam", "Teamwork"],
     projectUrl: "https://speaf.itch.io/quantumplayground"
   }
 ];
