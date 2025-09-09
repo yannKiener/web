@@ -29,7 +29,7 @@ export default function DevBlog() {
               {/* Development Timeline */}
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold text-green-400 mb-2">Pitch</h2>
-                <p className="text-gray-400">What's this game about ?</p>
+                <p className="text-gray-400">What&apos;s this game about ?</p>
               </div>
               <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-lg p-8 border border-gray-600 mb-12">
                   <p className="text-xl text-gray-300 mb-6">
@@ -68,7 +68,7 @@ export default function DevBlog() {
                   <span className="text-sm text-gray-500 bg-gray-700 px-3 py-1 rounded-full">August 2025</span>
                 </div>
                 <p className="text-gray-400 mb-4">
-                  No code this time, holidays break. After vacations, I had to iterate on the target gameplay now that we have a nice base to work on. What are the next priorities and how could I communicate on this game ? Well, let's create a website. Hi there o/
+                  No code this time, holidays break. After vacations, I had to iterate on the target gameplay now that we have a nice base to work on. What are the next priorities and how could I communicate on this game ? Well, let&apos;s create a website. Hi there o/
                 </p>
                 <div className="text-sm text-gray-500">
                   <strong>Features:</strong> Website creation, finalisation of gameplay loops, roadmap and priorities updates
@@ -111,7 +111,7 @@ export default function DevBlog() {
                   <span className="text-sm text-gray-500 bg-gray-700 px-3 py-1 rounded-full">9 commits - May 2025</span>
                 </div>
                 <p className="text-gray-400 mb-4">
-                  The very beginning of Empyrius Siege. After a year of cooking ideas, planning stories, and testing prototypes, the "3C's", story and main gameplay loops are ready. We can start coding in the actual game ! To start, added basic movement systems, initial character setup for the player, the camera, and a first enemy to have the smallest game loop.
+                  The very beginning of Empyrius Siege. After a year of cooking ideas, planning stories, and testing prototypes, the &quot;3C&apos;s&quot;, story and main gameplay loops are ready. We can start coding in the actual game ! To start, added basic movement systems, initial character setup for the player, the camera, and a first enemy to have the smallest game loop.
                 </p>
                 <div className="text-sm text-gray-500">
                   <strong>Features:</strong> Initial character movement, first enemy, core interaction foundation
