@@ -53,11 +53,22 @@ export default function DevBlog() {
                   <h3 className="text-xl font-bold text-green-400">Finalizing stage gameplay loops</h3>
                   <span className="text-sm text-gray-500 bg-gray-700 px-3 py-1 rounded-full">September 2025</span>
                 </div>
-                <p className="text-gray-400 mb-4">
-                  Updated the xp progression to be an editable exponential function, also balance for weapons to have a sweet first stage.
-                </p>
-                <div className="text-sm text-gray-500">
-                  <strong>Features:</strong> Update on XP scaling & weapon balance.
+                <div className="flex gap-6">
+                  <div className="flex-1">
+                    <p className="text-gray-400 mb-4">
+                      Updated the xp progression to be an editable exponential function, also balance for weapons to have a sweet first stage.
+                    </p>
+                    <div className="text-sm text-gray-500">
+                      <strong>Features:</strong> Update on XP scaling & weapon balance.
+                    </div>
+                  </div>
+                  <div className="w-32 h-32 flex-shrink-0">
+                    <img 
+                      src="/images/Current.png" 
+                      alt="Current - Finalizing stage gameplay loops" 
+                      className="w-full h-full object-cover rounded-lg border border-gray-600"
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -67,11 +78,22 @@ export default function DevBlog() {
                   <h3 className="text-xl font-bold text-blue-400">Gameplay planning & communication</h3>
                   <span className="text-sm text-gray-500 bg-gray-700 px-3 py-1 rounded-full">August 2025</span>
                 </div>
-                <p className="text-gray-400 mb-4">
-                  No code this time, holidays break. After vacations, I had to iterate on the target gameplay now that we have a nice base to work on. What are the next priorities and how could I communicate on this game ? Well, let&apos;s create a website. Hi there o/
-                </p>
-                <div className="text-sm text-gray-500">
-                  <strong>Features:</strong> Website creation, finalisation of gameplay loops, roadmap and priorities updates
+                <div className="flex gap-6">
+                  <div className="flex-1">
+                    <p className="text-gray-400 mb-4">
+                      No code this time, holidays break. After vacations, I had to iterate on the target gameplay now that we have a nice base to work on. What are the next priorities and how could I communicate on this game ? Well, let&apos;s create a website. Hi there o/
+                    </p>
+                    <div className="text-sm text-gray-500">
+                      <strong>Features:</strong> HOLIDAYS ! Website creation, finalisation of gameplay loops, roadmap and priorities updates
+                    </div>
+                  </div>
+                  <div className="w-32 h-32 flex-shrink-0">
+                    <img 
+                      src="/images/holidays.png" 
+                      alt="Holidays - Gameplay planning & communication" 
+                      className="w-full h-full object-cover rounded-lg border border-gray-600"
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -79,14 +101,25 @@ export default function DevBlog() {
               <div className="bg-gray-800/50 rounded-lg p-8 border border-gray-700 border-l-4 border-l-purple-500">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl font-bold text-purple-400">Refining core gameplay and adding variety</h3>
-                  <span className="text-sm text-gray-500 bg-gray-700 px-3 py-1 rounded-full">36 commits - July 2025</span>
+                  <span className="text-sm text-gray-500 bg-gray-700 px-3 py-1 rounded-full">July 2025</span>
                 </div>
-                <p className="text-gray-400 mb-4">
-                  Big update on graphisms and sounds. Added bosses and steps during the stage, changed spawning to waves and added a timer. Now we have the main game loop implemented. We can also select weapons when leveling up, and have bonus stats when no more weapon room is available. 
-                  Added possibility for the player to use multiple Mechas for later, and switched to factions for allies and enemies. Also worked on AI movements and attack behaviors, performance improvements and a main menu.
-                </p>
-                <div className="text-sm text-gray-500">
-                  <strong>Features:</strong> Turret selection UI on leveling up, global dynamic turret stats, range finder, graphisms & sounds for variety. First balance patch !
+                <div className="flex gap-6">
+                  <div className="flex-1">
+                    <p className="text-gray-400 mb-4">
+                      Big update on graphisms and sounds. Added bosses and steps during the stage, changed spawning to waves and added a timer. Now we have the main game loop implemented. We can also select weapons when leveling up, and have bonus stats when no more weapon room is available. 
+                      Added possibility for the player to use multiple Mechas for later, and switched to factions for allies and enemies. Also worked on AI movements and attack behaviors, performance improvements and a main menu.
+                    </p>
+                    <div className="text-sm text-gray-500">
+                      <strong>Features:</strong> Turret selection UI on leveling up, global dynamic turret stats, range finder, graphisms & sounds for variety. First balance patch !
+                    </div>
+                  </div>
+                  <div className="w-32 h-32 flex-shrink-0">
+                    <img 
+                      src="/images/Build 3.png" 
+                      alt="Build 3 - Refining core gameplay and adding variety" 
+                      className="w-full h-full object-cover rounded-lg border border-gray-600"
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -94,13 +127,24 @@ export default function DevBlog() {
               <div className="bg-gray-800/50 rounded-lg p-8 border border-gray-700 border-l-4 border-l-orange-500">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl font-bold text-orange-400">Creating project foundations</h3>
-                  <span className="text-sm text-gray-500 bg-gray-700 px-3 py-1 rounded-full">9 commits - June 2025</span>
+                  <span className="text-sm text-gray-500 bg-gray-700 px-3 py-1 rounded-full">June 2025</span>
                 </div>
-                <p className="text-gray-400 mb-4">
-                  Classes structure for the game and core mecanics for combat : turrets, targeting, enemies with a spawner and allies. The game has evolved from basic movement to a combat system with few weapon types and a game loop with leveling up that gives flat stats to the player. Also with UI elements like HealthBar, explosions, and musics.
-                </p>
-                <div className="text-sm text-gray-500">
-                  <strong>Features:</strong> Core mechanics, player / ally / enemy and spawner system, turrets with stats and targeting systems, UI elements and music / sound integration
+                <div className="flex gap-6">
+                  <div className="flex-1">
+                    <p className="text-gray-400 mb-4">
+                      Classes structure for the game and core mecanics for combat : turrets, targeting, enemies with a spawner and allies. The game has evolved from basic movement to a combat system with few weapon types and a game loop with leveling up that gives flat stats to the player. Also with UI elements like HealthBar, explosions, and musics.
+                    </p>
+                    <div className="text-sm text-gray-500">
+                      <strong>Features:</strong> Core mechanics, player / ally / enemy and spawner system, turrets with stats and targeting systems, UI elements and music / sound integration
+                    </div>
+                  </div>
+                  <div className="w-32 h-32 flex-shrink-0">
+                    <img 
+                      src="/images/Build 2.png" 
+                      alt="Build 2 - Creating project foundations" 
+                      className="w-full h-full object-cover rounded-lg border border-gray-600"
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -108,13 +152,24 @@ export default function DevBlog() {
               <div className="bg-gray-800/50 rounded-lg p-8 border border-gray-700 border-l-4 border-l-gray-500">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl font-bold text-gray-400">Initial Prototype</h3>
-                  <span className="text-sm text-gray-500 bg-gray-700 px-3 py-1 rounded-full">9 commits - May 2025</span>
+                  <span className="text-sm text-gray-500 bg-gray-700 px-3 py-1 rounded-full">May 2025</span>
                 </div>
-                <p className="text-gray-400 mb-4">
-                  The very beginning of Empyrius Siege. After a year of cooking ideas, planning stories, and testing prototypes, the &quot;3C&apos;s&quot;, story and main gameplay loops are ready. We can start coding in the actual game ! To start, added basic movement systems, initial character setup for the player, the camera, and a first enemy to have the smallest game loop.
-                </p>
-                <div className="text-sm text-gray-500">
-                  <strong>Features:</strong> Initial character movement, first enemy, core interaction foundation
+                <div className="flex gap-6">
+                  <div className="flex-1">
+                    <p className="text-gray-400 mb-4">
+                      The very beginning of Empyrius Siege. After a year of cooking ideas, planning stories, and testing prototypes, the &quot;3C&apos;s&quot;, story and main gameplay loops are ready. We can start coding in the actual game ! To start, added basic movement systems, initial character setup for the player, the camera, and a first enemy to have the smallest game loop.
+                    </p>
+                    <div className="text-sm text-gray-500">
+                      <strong>Features:</strong> Initial character movement, first enemy, core interaction foundation
+                    </div>
+                  </div>
+                  <div className="w-32 h-32 flex-shrink-0">
+                    <img 
+                      src="/images/Build 1.png" 
+                      alt="Build 1 - Initial Prototype" 
+                      className="w-full h-full object-cover rounded-lg border border-gray-600"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
