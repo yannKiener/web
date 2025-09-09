@@ -1,5 +1,6 @@
 'use client';
 import Link from "next/link";
+import Image from "next/image";
 
 export default function DevBlog() {
   return (
@@ -63,9 +64,11 @@ export default function DevBlog() {
                     </div>
                   </div>
                   <div className="w-32 h-32 flex-shrink-0">
-                    <img 
+                    <Image 
                       src="/images/Current.png" 
                       alt="Current - Finalizing stage gameplay loops" 
+                      width={128}
+                      height={128}
                       className="w-full h-full object-cover rounded-lg border border-gray-600"
                     />
                   </div>
@@ -88,9 +91,11 @@ export default function DevBlog() {
                     </div>
                   </div>
                   <div className="w-32 h-32 flex-shrink-0">
-                    <img 
+                    <Image 
                       src="/images/holidays.png" 
                       alt="Holidays - Gameplay planning & communication" 
+                      width={128}
+                      height={128}
                       className="w-full h-full object-cover rounded-lg border border-gray-600"
                     />
                   </div>
@@ -114,9 +119,11 @@ export default function DevBlog() {
                     </div>
                   </div>
                   <div className="w-32 h-32 flex-shrink-0">
-                    <img 
+                    <Image 
                       src="/images/Build 3.png" 
                       alt="Build 3 - Refining core gameplay and adding variety" 
+                      width={128}
+                      height={128}
                       className="w-full h-full object-cover rounded-lg border border-gray-600"
                     />
                   </div>
@@ -139,9 +146,11 @@ export default function DevBlog() {
                     </div>
                   </div>
                   <div className="w-32 h-32 flex-shrink-0">
-                    <img 
+                    <Image 
                       src="/images/Build 2.png" 
                       alt="Build 2 - Creating project foundations" 
+                      width={128}
+                      height={128}
                       className="w-full h-full object-cover rounded-lg border border-gray-600"
                     />
                   </div>
@@ -164,9 +173,11 @@ export default function DevBlog() {
                     </div>
                   </div>
                   <div className="w-32 h-32 flex-shrink-0">
-                    <img 
+                    <Image 
                       src="/images/Build 1.png" 
                       alt="Build 1 - Initial Prototype" 
+                      width={128}
+                      height={128}
                       className="w-full h-full object-cover rounded-lg border border-gray-600"
                     />
                   </div>
@@ -184,7 +195,7 @@ export default function DevBlog() {
                   <p className="text-gray-400 text-center mb-4">
                     Try the latest build of Empyrius Siege <i>(v.0.9)</i>
                     <br />
-                    Supported on Android device only for now.
+                    Supported on Android device only for now. Don&apos;t mind the menu buttons not implemented yet. :)
                   </p>
                   <div className="text-center">
                     <a 
