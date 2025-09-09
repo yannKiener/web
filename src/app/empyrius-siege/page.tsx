@@ -48,9 +48,9 @@ export default function DevBlog() {
               </div>
 
               {/* Latest - Combat System Overhaul */}
-              <div className="bg-gray-800/50 rounded-lg p-8 border border-gray-700 border-l-4 border-l-green-500">
+              <div className="bg-gray-800/50 rounded-lg p-8 border border-gray-700 border-l-4 border-l-purple-500">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-bold text-green-400">Finalizing stage gameplay loops</h3>
+                  <h3 className="text-xl font-bold text-purple-400">Finalizing stage gameplay loops</h3>
                   <span className="text-sm text-gray-500 bg-gray-700 px-3 py-1 rounded-full">September 2025</span>
                 </div>
                 <div className="flex gap-6">
@@ -98,9 +98,9 @@ export default function DevBlog() {
               </div>
 
               {/* Mid Development - Weapon Systems */}
-              <div className="bg-gray-800/50 rounded-lg p-8 border border-gray-700 border-l-4 border-l-purple-500">
+              <div className="bg-gray-800/50 rounded-lg p-8 border border-gray-700 border-l-4 border-l-orange-500">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-bold text-purple-400">Refining core gameplay and adding variety</h3>
+                  <h3 className="text-xl font-bold text-orange-400">Refining core gameplay and adding variety</h3>
                   <span className="text-sm text-gray-500 bg-gray-700 px-3 py-1 rounded-full">July 2025</span>
                 </div>
                 <div className="flex gap-6">
@@ -124,9 +124,9 @@ export default function DevBlog() {
               </div>
 
               {/* Early - Foundation */}
-              <div className="bg-gray-800/50 rounded-lg p-8 border border-gray-700 border-l-4 border-l-orange-500">
+              <div className="bg-gray-800/50 rounded-lg p-8 border border-gray-700 border-l-4 border-l-purple-500">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-bold text-orange-400">Creating project foundations</h3>
+                  <h3 className="text-xl font-bold text-purple-400">Creating project foundations</h3>
                   <span className="text-sm text-gray-500 bg-gray-700 px-3 py-1 rounded-full">June 2025</span>
                 </div>
                 <div className="flex gap-6">
@@ -149,9 +149,9 @@ export default function DevBlog() {
               </div>
 
               {/* Initial - Prototype */}
-              <div className="bg-gray-800/50 rounded-lg p-8 border border-gray-700 border-l-4 border-l-gray-500">
+              <div className="bg-gray-800/50 rounded-lg p-8 border border-gray-700 border-l-4 border-l-blue-500">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-bold text-gray-400">Initial Prototype</h3>
+                  <h3 className="text-xl font-bold text-blue-400">Initial Prototype</h3>
                   <span className="text-sm text-gray-500 bg-gray-700 px-3 py-1 rounded-full">May 2025</span>
                 </div>
                 <div className="flex gap-6">

@@ -69,7 +69,7 @@ export default function ProjectCard({
               key={tech}
               className={`px-3 py-1 rounded-full text-sm ${
                 isOngoing 
-                  ? 'bg-green-600/20 text-green-400' 
+                  ? 'bg-purple-600/20 text-purple-400' 
                   : 'bg-purple-600/20 text-purple-400'
               }`}
             >
@@ -80,7 +80,7 @@ export default function ProjectCard({
         {projectUrl && (
           <div className="text-center">
             {isOngoing ? (
-              <div className="inline-block px-4 py-2 rounded-lg transition-colors bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 cursor-pointer">
+              <div className="inline-block px-4 py-2 rounded-lg transition-colors bg-purple-600 hover:bg-purple-700 cursor-pointer">
                 View Dev Blog
               </div>
             ) : (
