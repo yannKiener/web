@@ -31,7 +31,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   const youtubeEmbedUrl = videoUrl ? getYouTubeEmbedUrl(videoUrl) : null;
 
-  return (
+  const cardContent = (
     <div className={`bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-transform ${isOngoing ? 'h-full' : ''}`}>
       <div className={`relative ${isOngoing ? 'h-72' : 'h-48'}`}>
         {youtubeEmbedUrl ? (
@@ -67,22 +67,47 @@ export default function ProjectCard({
           {technologies.map((tech) => (
             <span
               key={tech}
-              className="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-sm"
+              className={`px-3 py-1 rounded-full text-sm ${
+                isOngoing 
+                  ? 'bg-green-600/20 text-green-400' 
+                  : 'bg-purple-600/20 text-purple-400'
+              }`}
             >
               {tech}
             </span>
           ))}
         </div>
-        {projectUrl && !isOngoing && (
-          <Link
-            href={projectUrl}
-            target="_blank"
-            className="inline-block px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg transition-colors"
-          >
-            View
-          </Link>
+        {projectUrl && (
+          <div className="text-center">
+            {isOngoing ? (
+              <div className="inline-block px-4 py-2 rounded-lg transition-colors bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 cursor-pointer">
+                View Dev Blog
+              </div>
+            ) : (
+              <div className="inline-block px-4 py-2 rounded-lg transition-colors bg-purple-600 hover:bg-purple-700 cursor-pointer">
+                See More
+              </div>
+            )}
+          </div>
         )}
       </div>
     </div>
   );
+
+  // For all projects with URLs, make the entire card clickable
+  if (projectUrl) {
+    return (
+      <Link 
+        href={projectUrl} 
+        target={isOngoing ? "_self" : "_blank"} 
+        rel={isOngoing ? undefined : "noopener noreferrer"} 
+        className="block"
+      >
+        {cardContent}
+      </Link>
+    );
+  }
+
+  // For projects without URLs, return the card as is
+  return cardContent;
 } 

@@ -7,6 +7,8 @@ import Image from 'next/image';
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isOngoingHovered, setIsOngoingHovered] = useState(false);
+  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,10 +18,30 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleMouseEnter = () => {
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout);
+      setHoverTimeout(null);
+    }
+    setIsOngoingHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setIsOngoingHovered(false);
+    }, 150); // Small delay to allow moving to dropdown
+    setHoverTimeout(timeout);
+  };
+
+  const ongoingProjects = [
+    { href: '/empyrius-siege', label: 'Empyrius Siege' },
+    { href: '/project-healbot', label: 'Project Healbot' },
+  ];
+
   const navLinks = [
-    { href: '#ongoing', label: 'Upcoming' },
-    { href: '#projects', label: 'Portfolio' },
-    { href: '#contact', label: 'Contact' },
+    { href: '/#ongoing', label: 'Ongoing' },
+    { href: '/#projects', label: 'Portfolio' },
+    { href: '/#contact', label: 'Contact' },
   ];
 
   return (
@@ -42,7 +64,39 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
+            {/* Ongoing Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <Link
+                href="/#ongoing"
+                className="text-gray-300 hover:text-white transition-colors"
+              >
+                Ongoing
+              </Link>
+              {isOngoingHovered && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg border border-gray-700 py-2 z-50"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {ongoingProjects.map((project) => (
+                    <Link
+                      key={project.href}
+                      href={project.href}
+                      className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 transition-colors"
+                    >
+                      {project.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Other Navigation Links */}
+            {navLinks.slice(1).map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -80,7 +134,25 @@ export default function Navigation() {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4">
             <div className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
+              {/* Ongoing Projects for Mobile */}
+              <div>
+                <div className="text-gray-300 font-semibold mb-2">Ongoing</div>
+                <div className="ml-4 space-y-2">
+                  {ongoingProjects.map((project) => (
+                    <Link
+                      key={project.href}
+                      href={project.href}
+                      className="block text-gray-400 hover:text-white transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {project.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Other Navigation Links */}
+              {navLinks.slice(1).map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}

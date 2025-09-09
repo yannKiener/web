@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./styles/carousel.css";
+import { useEffect, useRef } from "react";
 
 const projects = [
   {
@@ -58,26 +59,10 @@ const projects = [
   }
 ];
 
-const ongoingProjects = [
-  {
-    title: "Project H",
-    description: "A dungeon crawler about living the experience of a healer, supporting with a clunky group with a top-down view. Hopefully some day on steam",
-    imageUrl: "/images/project-h.png",
-    videoUrl: "https://youtu.be/lr76TPSGq1A", 
-    technologies: ["Unity", "Dungeon crawler", "Healing"],
-    projectUrl: "#"
-  },
-  {
-    title: "Sky Pirates",
-    description: "Steampunk universe + Pirate ships : Conquer caribbean islands with air superiority. Hopefully some day on Android and maybe iOS",
-    imageUrl: "/images/skypirates.png",
-    videoUrl: "https://www.youtube.com/watch?v=bq_5gRVimWg", 
-    technologies: ["Unity", "Mobile", "Pirates"],
-    projectUrl: "#"
-  }
-];
 
 export default function Home() {
+  const sliderRef = useRef<Slider>(null);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -105,12 +90,48 @@ export default function Home() {
     ]
   };
 
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Handle carousel navigation when portfolio section is visible
+      const portfolioSection = document.getElementById('projects');
+      if (portfolioSection) {
+        const rect = portfolioSection.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        
+        if (isVisible) {
+          // Handle carousel navigation keys
+          if (event.key === 'ArrowLeft' || event.key === 'a' || event.key === 'A' || event.key === 'q' || event.key === 'Q') {
+            event.preventDefault();
+            sliderRef.current?.slickPrev();
+            return;
+          } else if (event.key === 'ArrowRight' || event.key === 'd' || event.key === 'D') {
+            event.preventDefault();
+            sliderRef.current?.slickNext();
+            return;
+          }
+        }
+      }
+
+      // Handle page scrolling (always active)
+      if (event.key === 'ArrowUp' || event.key === 'w' || event.key === 'W' || event.key === 'z' || event.key === 'Z') {
+        event.preventDefault();
+        window.scrollBy({ top: -300, behavior: 'smooth' });
+      } else if (event.key === 'ArrowDown' || event.key === 's' || event.key === 'S') {
+        event.preventDefault();
+        window.scrollBy({ top: 300, behavior: 'smooth' });
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-32">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h1 className="text-6xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-500 to-violet-600">
+          <h1 className="text-6xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-500 to-violet-600 leading-tight">
             Speaf
           </h1>
           <h2 className="text-3xl md:text-4xl text-gray-300">
@@ -124,13 +145,33 @@ export default function Home() {
 
       {/* Ongoing Projects Section */}
       <section id="ongoing" className="container mx-auto px-4 py-20">
-        <h2 className="text-4xl font-bold text-center mb-12">Upcoming</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {ongoingProjects.map((project, index) => (
-            <div key={index}>
-              <ProjectCard {...project} isOngoing={true} />
-            </div>
-          ))}
+        <h2 className="text-4xl font-bold text-center mb-12">Ongoing</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {/* Empyrius Siege */}
+          <div>
+            <ProjectCard 
+              title="Empyrius Siege"
+              description="Play as a mercenary Mecha that upgrades its weaponry with enemy parts, and fight for faction lords to conquer territories in a galactic war."
+              imageUrl="/images/empyrius-siege.png"
+              videoUrl="https://www.youtube.com/watch?v=rL_w1qj9Vqc"
+              technologies={["Main Dev", "Futuristic", "Rogue-Lite", "Mobile-First", "Unity"]}
+              projectUrl="/empyrius-siege"
+              isOngoing={true}
+            />
+          </div>
+
+          {/* Project Healbot */}
+          <div>
+            <ProjectCard 
+              title="Project Healbot"
+              description="A dungeon crawler about living the experience of a healer, supporting with a clunky group with a top-down view. Developpement stalled for now."
+              imageUrl="/images/project-h.png"
+              videoUrl="https://youtu.be/lr76TPSGq1A"
+              technologies={["Dungeon crawler", "Healing","PC","Unity"]}
+              projectUrl="/project-healbot"
+              isOngoing={true}
+            />
+          </div>
         </div>
       </section>
 
@@ -138,7 +179,7 @@ export default function Home() {
       <section id="projects" className="container mx-auto px-4 py-20">
         <h2 className="text-4xl font-bold text-center mb-12">Portfolio</h2>
         <div className="carousel-container">
-          <Slider {...settings}>
+          <Slider ref={sliderRef} {...settings}>
             {projects.map((project, index) => (
               <div key={index} className="px-2">
                 <ProjectCard {...project} />
@@ -153,7 +194,7 @@ export default function Home() {
         <h2 className="text-4xl font-bold mb-12 text-center">Get in Touch</h2>
         <div className="max-w-2xl mx-auto">
           <p className="text-xl text-gray-400 text-center mb-8">
-            Have some feedback or interested in working together? 
+            Feedbacks are warmly welcomed ! If you have any suggestion, found a bug, or just give kudos, feel free to contact me. 
           </p>
           <div className="flex justify-center gap-6">
             <Link 
@@ -161,6 +202,14 @@ export default function Home() {
               className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg transition-colors"
             >
               Email Me
+            </Link>
+            <Link 
+              href="https://discord.gg/d6xc2bB5FA" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg transition-colors"
+            >
+              Discord
             </Link>
           </div>
         </div>
