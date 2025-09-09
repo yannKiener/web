@@ -44,7 +44,7 @@ export default function DevBlog() {
             <div className="space-y-8">
               {/* Development Timeline */}
               <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-green-400 mb-2">Development History</h2>
+                <h2 className="text-3xl font-bold text-green-400 mb-2">Development history</h2>
                 <p className="text-gray-400">Chronological updates from latest to earliest</p>
               </div>
 
@@ -195,7 +195,7 @@ export default function DevBlog() {
                   <p className="text-gray-400 text-center mb-4">
                     Try the latest build of Empyrius Siege <i>(v.0.9)</i>
                     <br />
-                    Supported on Android device only for now. Don&apos;t mind the menu buttons not implemented yet. :)
+                    Supported on Android device only for now. Don&apos;t mind not winning and the main menu buttons not implemented yet. :)
                   </p>
                   <div className="text-center">
                     <a 
@@ -215,7 +215,7 @@ export default function DevBlog() {
                   <div className="space-y-6">
                     {/* Current Focus */}
                     <div>
-                      <h4 className="text-lg font-semibold text-orange-400 mb-3">Current Focus : Alpha Build</h4>
+                      <h4 className="text-lg font-semibold text-orange-400 mb-3">Current focus : First Alpha build</h4>
                       <div className="bg-gray-700/50 rounded-lg p-4">
                         <p className="text-sm text-gray-300">
                           First implementation of all gameplay loops and core mechanics.
@@ -225,15 +225,11 @@ export default function DevBlog() {
 
                     {/* Upcoming Steps */}
                     <div>
-                      <h4 className="text-lg font-semibold text-blue-400 mb-3">Upcoming Steps</h4>
+                      <h4 className="text-lg font-semibold text-blue-400 mb-3">Upcoming steps</h4>
                       <ul className="space-y-2 text-sm text-gray-300">
                         <li className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
-                          <span>Polish first stage gameplay loop : Harvest enemy remains</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-green-500 mr-2">•</span>
-                          <span>Spawn remains on Enemy Death </span>
+                          <span>Spawn remains on enemy death </span>
                         </li>
                         <li className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
@@ -243,16 +239,12 @@ export default function DevBlog() {
                           <span className="text-green-500 mr-2">•</span>
                           <span>Add static and generated props to harvest</span>
                         </li>
-                        <li className="flex items-start">
-                          <span className="text-green-500 mr-2">•</span>
-                          <span>Create level, enemies and props for a second stage with the other faction.</span>
-                        </li>
                       </ul>
                     </div>
 
                     {/* Future Leaps */}
                     <div>
-                      <h4 className="text-lg font-semibold text-purple-400 mb-3">Future Leaps</h4>
+                      <h4 className="text-lg font-semibold text-purple-400 mb-3">Future leaps</h4>
                       <ul className="space-y-2 text-sm text-gray-300">
                         <li className="flex items-start">
                           <span className="text-yellow-500 mr-2">•</span>
@@ -272,7 +264,7 @@ export default function DevBlog() {
                         </li>
                         <li className="flex items-start">
                           <span className="text-yellow-500 mr-2">•</span>
-                          <span>Story & Galactic progression</span>
+                          <span>Story & galactic progression</span>
                         </li>
                         <li className="flex items-start">
                           <span className="text-yellow-500 mr-2">•</span>
