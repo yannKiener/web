@@ -178,8 +178,28 @@ export default function DevBlog() {
             {/* Roadmap Sidebar */}
             <div className="lg:col-span-1">
               <div className="sticky top-24">
+                {/* Demo Section */}
+                <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700 mb-6">
+                  <h3 className="text-2xl font-bold text-green-400 mb-4 text-center">Demo</h3>
+                  <p className="text-gray-400 text-center mb-4">
+                    Try the latest build of Empyrius Siege <i>(v.0.9)</i>
+                    <br />
+                    Supported on Android device only for now.
+                  </p>
+                  <div className="text-center">
+                    <a 
+                      href="https://drive.google.com/file/d/1Ugcerckbsjnez6PyiLvmSDGIilRugf8-/view?usp=sharing" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg transition-colors text-white font-medium"
+                    >
+                      Download apk
+                    </a>
+                  </div>
+                </div>
+
                 <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700 mt-00">
-                  <h3 className="text-2xl font-bold text-green-400 mb-6">Roadmap</h3>
+                  <h3 className="text-2xl font-bold text-green-400 mb-6 text-center">Roadmap</h3>
                   
                   <div className="space-y-6">
                     {/* Current Focus */}
