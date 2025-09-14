@@ -51,13 +51,13 @@ export default function DevBlog() {
               {/* Latest - Combat System Overhaul */}
               <div className="bg-gray-800/50 rounded-lg p-8 border border-gray-700 border-l-4 border-l-purple-500">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-bold text-purple-400">Finalizing stage gameplay loops</h3>
+                  <h3 className="text-xl font-bold text-purple-400">[Current] Finalizing stage gameplay loops</h3>
                   <span className="text-sm text-gray-500 bg-gray-700 px-3 py-1 rounded-full">September 2025</span>
                 </div>
                 <div className="flex gap-6">
                   <div className="flex-1">
                     <p className="text-gray-400 mb-4">
-                      Updated the xp progression to be an editable exponential function, also balance for weapons to have a sweet first stage.
+                      Added the wreckage and reclaim mechanic to gain XP ! Also updated the xp progression to be an editable function, more stats to upgrade and small balance tweaks. 
                     </p>
                     <div className="text-sm text-gray-500">
                       <strong>Features:</strong> Update on XP scaling & weapon balance.
@@ -65,8 +65,8 @@ export default function DevBlog() {
                   </div>
                   <div className="w-32 h-32 flex-shrink-0">
                     <Image 
-                      src="/images/Current.png" 
-                      alt="Current - Finalizing stage gameplay loops" 
+                      src="/images/build 4.png" 
+                      alt="Build 4 - Finalizing stage gameplay loops" 
                       width={128}
                       height={128}
                       className="w-full h-full object-cover rounded-lg border border-gray-600"
