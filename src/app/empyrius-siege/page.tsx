@@ -57,10 +57,10 @@ export default function DevBlog() {
                 <div className="flex gap-6">
                   <div className="flex-1">
                     <p className="text-gray-400 mb-4">
-                      Now enemies spawn a wreckage on death, and we can reclaim those to gain XP and upgrade ourselves ! Also updated the xp progression to be an editable function instead of a fixed value, more stats to upgrade and small balance tweaks. 
+                      Now enemies spawn a wreckage on death, and we can reclaim those to gain XP and upgrade ourselves ! Turrets can now be upgraded with tiers, with multiple paths for some of them. Also updated the xp progression to be an editable function instead of a fixed value, more stats to upgrade and small balance tweaks. 
                     </p>
                     <div className="text-sm text-gray-500">
-                      <strong>Features:</strong> Wreckage & reclaim mechanic, update on XP scaling & balance tweaks.
+                      <strong>Features:</strong> Turret upgrades, wreckage & reclaim mechanic, update on XP scaling & balance tweaks.
                     </div>
                   </div>
                   <div className="w-32 h-32 flex-shrink-0">
@@ -193,13 +193,13 @@ export default function DevBlog() {
                 <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700 mb-6">
                   <h3 className="text-2xl font-bold text-green-400 mb-4 text-center">Demo</h3>
                   <p className="text-gray-400 text-center mb-4">
-                    Try the latest build of Empyrius Siege <i>(v.0.9)</i>
+                    Try the latest build of Empyrius Siege <i>(v.0.10)</i>
                     <br />
-                    Supported on Android device only for now. Don&apos;t mind not winning and the main menu buttons not implemented yet. :)
+                    Supported on Android device only for now. Don&apos;t mind not winning and some main menu buttons not implemented yet. :)
                   </p>
                   <div className="text-center">
                     <a 
-                      href="https://drive.google.com/file/d/1Ugcerckbsjnez6PyiLvmSDGIilRugf8-/view?usp=sharing" 
+                      href="https://drive.google.com/file/d/10QHL7YrhlbZEOFQjT3Kx0zFSMYaVk5Kk/view?usp=sharing" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg transition-colors text-white font-medium"
@@ -218,7 +218,7 @@ export default function DevBlog() {
                       <h4 className="text-lg font-semibold text-orange-400 mb-3">Current focus : Level mechanics</h4>
                       <div className="bg-gray-700/50 rounded-lg p-4">
                         <p className="text-sm text-gray-300">
-                          First implementation of all gameplay loops and core mechanics when we&apos;re playing a level.
+                          First implementation of all gameplay loops and core mechanics when we&apos;re playing a level. Balancing and fine tuning will be later.
                         </p>
                       </div>
                     </div>
@@ -237,7 +237,7 @@ export default function DevBlog() {
                         </li>
                         <li className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
-                          <span>Make turrets upgradable with tiers</span>
+                          <span> <del>Make turrets upgradable with tiers</del> [DONE]</span>
                         </li>
                         <li className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
