@@ -51,16 +51,16 @@ export default function DevBlog() {
               {/* Latest - Combat System Overhaul */}
               <div className="bg-gray-800/50 rounded-lg p-8 border border-gray-700 border-l-4 border-l-purple-500">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-bold text-purple-400">[Current] Finalizing stage gameplay loops</h3>
+                  <h3 className="text-xl font-bold text-purple-400">Finalizing stage gameplay loops</h3>
                   <span className="text-sm text-gray-500 bg-gray-700 px-3 py-1 rounded-full">September 2025</span>
                 </div>
                 <div className="flex gap-6">
                   <div className="flex-1">
                     <p className="text-gray-400 mb-4">
-                      Added the wreckage and reclaim mechanic to gain XP ! Also updated the xp progression to be an editable function, more stats to upgrade and small balance tweaks. 
+                      Now enemies spawn a wreckage on death, and we can reclaim those to gain XP and upgrade ourselves ! Also updated the xp progression to be an editable function instead of a fixed value, more stats to upgrade and small balance tweaks. 
                     </p>
                     <div className="text-sm text-gray-500">
-                      <strong>Features:</strong> Update on XP scaling & weapon balance.
+                      <strong>Features:</strong> Wreckage & reclaim mechanic, update on XP scaling & balance tweaks.
                     </div>
                   </div>
                   <div className="w-32 h-32 flex-shrink-0">
@@ -215,10 +215,10 @@ export default function DevBlog() {
                   <div className="space-y-6">
                     {/* Current Focus */}
                     <div>
-                      <h4 className="text-lg font-semibold text-orange-400 mb-3">Current focus : First Alpha build</h4>
+                      <h4 className="text-lg font-semibold text-orange-400 mb-3">Current focus : Level mechanics</h4>
                       <div className="bg-gray-700/50 rounded-lg p-4">
                         <p className="text-sm text-gray-300">
-                          First implementation of all gameplay loops and core mechanics.
+                          First implementation of all gameplay loops and core mechanics when we&apos;re playing a level.
                         </p>
                       </div>
                     </div>
@@ -229,11 +229,15 @@ export default function DevBlog() {
                       <ul className="space-y-2 text-sm text-gray-300">
                         <li className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
-                          <span>Spawn remains on enemy death </span>
+                          <span><del>Spawn remains on enemy death</del> [DONE]</span>
                         </li>
                         <li className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
-                          <span>Create harvesting mechanic to gain XP</span>
+                          <span><del>Create harvesting mechanic to gain XP</del> [DONE]</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-green-500 mr-2">•</span>
+                          <span>Make turrets upgradable with tiers</span>
                         </li>
                         <li className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
@@ -268,7 +272,7 @@ export default function DevBlog() {
                         </li>
                         <li className="flex items-start">
                           <span className="text-yellow-500 mr-2">•</span>
-                          <span>Polish</span>
+                          <span>Polish (This part will take a while...)</span>
                         </li>
                         <li className="flex items-start">
                           <span className="text-yellow-500 mr-2">•</span>
