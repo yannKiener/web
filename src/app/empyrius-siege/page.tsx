@@ -243,6 +243,10 @@ export default function DevBlog() {
                           <span className="text-green-500 mr-2">•</span>
                           <span>Add static and generated props to harvest</span>
                         </li>
+                        <li className="flex items-start">
+                          <span className="text-green-500 mr-2">•</span>
+                          <span>Balancing things to make level playable</span>
+                        </li>
                       </ul>
                     </div>
 
