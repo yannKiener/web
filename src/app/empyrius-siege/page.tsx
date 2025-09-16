@@ -57,10 +57,10 @@ export default function DevBlog() {
                 <div className="flex gap-6">
                   <div className="flex-1">
                     <p className="text-gray-400 mb-4">
-                      Now enemies spawn a wreckage on death, and we can reclaim those to gain XP and upgrade ourselves ! Turrets can now be upgraded with tiers, with multiple paths for some of them. Added 5 pew pew laser turrets, and also updated the xp progression to be an editable function instead of a fixed value, more stats to upgrade and small balance tweaks. 
+                      Now enemies spawn a wreckage on death, and we can reclaim those to gain XP and upgrade ourselves ! Turrets can now be upgraded with tiers, with multiple paths for some of them. Added 5 pew pew laser turrets, and also updated the xp progression to be an editable function instead of a fixed value, more stats to upgrade, trees and rocks to harvest and small balance tweaks. 
                     </p>
                     <div className="text-sm text-gray-500">
-                      <strong>Features:</strong> Turret upgrades, lasers, wreckage & reclaim mechanic, update on XP scaling & balance tweaks.
+                      <strong>Features:</strong> Turret upgrades, lasers, wreckage & reclaim mechanic, props, update on XP scaling & balance tweaks.
                     </div>
                   </div>
                   <div className="w-32 h-32 flex-shrink-0">
@@ -193,13 +193,13 @@ export default function DevBlog() {
                 <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700 mb-6">
                   <h3 className="text-2xl font-bold text-green-400 mb-4 text-center">Demo</h3>
                   <p className="text-gray-400 text-center mb-4">
-                    Try the latest build of Empyrius Siege <i>(v.0.11)</i>
+                    Try the latest build of Empyrius Siege <i>(v.0.12)</i>
                     <br />
-                    Supported on Android device only for now. Don&apos;t mind not winning and some main menu buttons not implemented yet. :)
+                    Supported on Android device only for now. Don&apos;t mind some main menu buttons not implemented yet. :)
                   </p>
                   <div className="text-center">
                     <a 
-                      href="https://drive.google.com/file/d/1TCzzj-cUPiRkoyup6Dfl9MWz7BJ0cNIR/view?usp=sharing" 
+                      href="https://drive.google.com/file/d/1n_QS1eoINiPAdtY-XYmmrSttWbH701Jn/view?usp=sharing" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg transition-colors text-white font-medium"
@@ -241,11 +241,11 @@ export default function DevBlog() {
                         </li>
                         <li className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
-                          <span>Add static and generated props to harvest</span>
+                          <span><del>Add static and generated props to harvest</del> [DONE]</span>
                         </li>
                         <li className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
-                          <span>Balancing things to make level playable</span>
+                          <span>Balancing things to make level winnable</span>
                         </li>
                       </ul>
                     </div>
