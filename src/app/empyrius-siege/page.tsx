@@ -57,7 +57,7 @@ export default function DevBlog() {
                 <div className="flex gap-6">
                   <div className="flex-1">
                     <p className="text-gray-400 mb-4">
-                      Now enemies spawn a wreckage on death, and we can reclaim those to gain XP and upgrade ourselves ! Turrets can now be upgraded with tiers, with multiple paths for some of them. Added 5 pew pew laser turrets, and also updated the xp progression to be an editable function instead of a fixed value, more stats to upgrade, trees and rocks to harvest and small balance tweaks. 
+                      Now enemies spawn a wreckage on death, and we can reclaim those to gain XP and upgrade ourselves ! Turrets can now be upgraded with tiers, with multiple paths for some of them. Added 5 pew pew laser turrets, and also updated the xp progression to be an editable function instead of a fixed value, more stats to upgrade, trees and rocks to harvest and balance tweaks. 
                     </p>
                     <div className="text-sm text-gray-500">
                       <strong>Features:</strong> Turret upgrades, lasers, wreckage & reclaim mechanic, props, update on XP scaling & balance tweaks.
@@ -193,13 +193,13 @@ export default function DevBlog() {
                 <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700 mb-6">
                   <h3 className="text-2xl font-bold text-green-400 mb-4 text-center">Demo</h3>
                   <p className="text-gray-400 text-center mb-4">
-                    Try the latest build of Empyrius Siege <i>(v.0.12)</i>
+                    Try the latest build of Empyrius Siege <i>(v.0.14)</i>
                     <br />
                     Supported on Android device only for now. Don&apos;t mind some main menu buttons not implemented yet. :)
                   </p>
                   <div className="text-center">
                     <a 
-                      href="https://drive.google.com/file/d/1n_QS1eoINiPAdtY-XYmmrSttWbH701Jn/view?usp=sharing" 
+                      href="https://drive.google.com/file/d/1j5jpzNt-43gnUaESo0URl5tihYNDzN9M/view?usp=sharing" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg transition-colors text-white font-medium"
@@ -215,10 +215,10 @@ export default function DevBlog() {
                   <div className="space-y-6">
                     {/* Current Focus */}
                     <div>
-                      <h4 className="text-lg font-semibold text-orange-400 mb-3">Current focus : Level mechanics</h4>
+                      <h4 className="text-lg font-semibold text-orange-400 mb-3">Current focus : Meta-progression mechanics</h4>
                       <div className="bg-gray-700/50 rounded-lg p-4">
                         <p className="text-sm text-gray-300">
-                          First implementation of all gameplay loops and core mechanics when we&apos;re playing a level. Balancing and fine tuning will be later.
+                          First implementation of all gameplay loops and core mechanics, from main menu to level. Content, balancing and fine tuning will be later.
                         </p>
                       </div>
                     </div>
@@ -229,23 +229,23 @@ export default function DevBlog() {
                       <ul className="space-y-2 text-sm text-gray-300">
                         <li className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
-                          <span><del>Spawn remains on enemy death</del> [DONE]</span>
+                          <span><del>Wreckage & harvesting mechanic to gain XP</del> [DONE]</span>
                         </li>
                         <li className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
-                          <span><del>Create harvesting mechanic to gain XP</del> [DONE]</span>
+                          <span><del>Lasers and turret upgrades</del> [DONE]</span>
                         </li>
                         <li className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
-                          <span> <del>Make turrets upgradable with tiers</del> [DONE]</span>
+                          <span>MVP of meta-progression bonuses and unlocks from main Menu</span>
                         </li>
                         <li className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
-                          <span><del>Add static and generated props to harvest</del> [DONE]</span>
+                          <span>Mission rewards & selection</span>
                         </li>
                         <li className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
-                          <span>Balancing things to make level winnable</span>
+                          <span>Saving meta-progression</span>
                         </li>
                       </ul>
                     </div>
