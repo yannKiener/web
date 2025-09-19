@@ -241,11 +241,11 @@ export default function DevBlog() {
                         </li>
                         <li className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
-                          <span>Mission rewards & selection</span>
+                          <span> <del>Saving meta-progression</del> [DONE]</span>
                         </li>
                         <li className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
-                          <span>Saving meta-progression</span>
+                          <span>Mission rewards & selection</span>
                         </li>
                       </ul>
                     </div>
