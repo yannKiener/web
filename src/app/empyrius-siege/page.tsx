@@ -57,10 +57,10 @@ export default function DevBlog() {
                 <div className="flex gap-6">
                   <div className="flex-1">
                     <p className="text-gray-400 mb-4">
-                      Now enemies spawn a wreckage on death, and we can reclaim those to gain XP and upgrade ourselves ! Turrets can now be upgraded with tiers, with multiple paths for some of them. Added 5 pew pew laser turrets, and also updated the xp progression to be an editable function instead of a fixed value, more stats to upgrade, trees and rocks to harvest and balance tweaks. 
+                      Now enemies spawn a wreckage on death, and we can reclaim those to gain XP and upgrade ourselves ! Turrets can now be upgraded with tiers, with multiple paths for some of them. Added 5 pew pew laser turrets, and also updated the xp progression to be an editable function instead of a fixed value, more stats to upgrade, trees and rocks to harvest and balance tweaks. Now with talents ! All free for now.
                     </p>
                     <div className="text-sm text-gray-500">
-                      <strong>Features:</strong> Turret upgrades, lasers, wreckage & reclaim mechanic, props, update on XP scaling & balance tweaks.
+                      <strong>Features:</strong> Turret upgrades, lasers, wreckage & reclaim mechanic, talent tree, props, update on XP scaling & balance tweaks.
                     </div>
                   </div>
                   <div className="w-32 h-32 flex-shrink-0">
@@ -199,7 +199,7 @@ export default function DevBlog() {
                   </p>
                   <div className="text-center">
                     <a 
-                      href="https://drive.google.com/file/d/1j5jpzNt-43gnUaESo0URl5tihYNDzN9M/view?usp=sharing" 
+                      href="https://drive.google.com/file/d/1-VoQQRcEM9sA5i58gEBTzuSb9VI4OvX7/view?usp=sharing" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg transition-colors text-white font-medium"
@@ -237,7 +237,7 @@ export default function DevBlog() {
                         </li>
                         <li className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
-                          <span>MVP of meta-progression bonuses and unlocks from main Menu</span>
+                          <span> <del>MVP of meta-progression bonuses and unlocks from main Menu</del> [DONE]</span>
                         </li>
                         <li className="flex items-start">
                           <span className="text-green-500 mr-2">•</span>
